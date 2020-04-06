@@ -1,0 +1,11 @@
+You are a video game designer working on an online multiplayer game. You want to implement a system
+where you can keep track of the attributes of each player and quickly increase player stats as they level
+up. The players will each have a unique username and each player will have a variety of stats that each
+have their own value. You want to be able to quickly switch between players, and access their stats to
+increase them when they unlock new achievements and levels. (DONE)
+
+
+You have a game and you will be adding a new feature to it. So, basically the new feature will allow
+the user to look up the strength of each weapon in the game by typing the name of the weapon or going
+through the list. This feature should keep track of the strength associated with the name of the weapon
+so that the user can look it up everytime they type the name of the weapon.

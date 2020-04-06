@@ -1,0 +1,10 @@
+Ak-47
+50
+Revolver
+16
+RegularSword
+13
+NotRegularSword
+16
+RocketLauncher
+5000
