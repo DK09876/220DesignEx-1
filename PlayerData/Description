@@ -1,3 +1,13 @@
+So, the only problem I found with the writeup was how the data was to be stored like after the program ended. For which I used a text file
+"Player.txt". I used this for all my program testing too for Playerdata as we could see all of the changes after each run. Also I assumed each player
+to have 3 stats. Attack,Defense and Speed which are all initialized to 1 at lvl 1 and whenever they level up a, their stat for one parameter is 
+increased by 1. Whenever a new player was added, or  a player had leveled up I would change the values in my HashMap and rewrite it into the text file.
+If the username is duplicate when adding a new player then the program just ignores the command straight up.
+
+For the weapons I did the same thing, except since we werent gonna change the weapons text file I only had the program read from the file and display
+the "strength" of the passed weapon.
+
+Questions:
 You are a video game designer working on an online multiplayer game. You want to implement a system
 where you can keep track of the attributes of each player and quickly increase player stats as they level
 up. The players will each have a unique username and each player will have a variety of stats that each
@@ -8,4 +18,4 @@ increase them when they unlock new achievements and levels. (DONE)
 You have a game and you will be adding a new feature to it. So, basically the new feature will allow
 the user to look up the strength of each weapon in the game by typing the name of the weapon or going
 through the list. This feature should keep track of the strength associated with the name of the weapon
-so that the user can look it up everytime they type the name of the weapon.
+so that the user can look it up everytime they type the name of the weapon. (DONE)

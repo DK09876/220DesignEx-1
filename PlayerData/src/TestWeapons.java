@@ -12,9 +12,7 @@ public class TestWeapons {
 		thisweapons=new Weapons();
 	}
 	@Test
-	public void testgetweapon() {
+	public void testgetweapon() throws Exception {
 		assertEquals(50,thisweapons.getweapon("Ak-47"));
-		
 	}
-
 }

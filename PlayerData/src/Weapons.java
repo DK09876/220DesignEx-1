@@ -17,7 +17,10 @@ public class Weapons implements Interface {
 		hash=new HashMap<String,Integer>();
 		getdata();
 		}
-	public int getweapon(String weapon) {
+	public int getweapon(String weapon) throws Exception {
+		if (!hash.containsKey(weapon))
+			throw new Exception();
+		//returns stat of the relevant weapon
 		int stat=hash.get(weapon);
 		return stat;
 	}

@@ -12,12 +12,14 @@ public class PlayerData implements Interface {
 	 
 	
 	 public void getdata() throws FileNotFoundException {
+		 //reading data from the text file and putting it into the hash
 		 String username="";
-		 int[] stats= new int[3];
 		 File newFile = new File("Players.txt");
 		 Scanner input= new Scanner(newFile);
 			while(input.hasNext()) {			
 				username = input.next();
+				//stats would overlap
+				int[] stats= new int[3];
 				for (int i=0;i<3;i++) {
 					stats[i]=Integer.parseInt(input.next());
 				}
@@ -61,47 +63,16 @@ public class PlayerData implements Interface {
 	 }
 	 
 	 public void levelup(String username,int stat) throws Exception {
-		 //if stat value not within 1-3 then throw exception
-		 hash.forEach((k,v)->{
-			 System.out.print(k);
-			 for(int j=0;j<v.length;j++)
-			 System.out.print(v[j]);
-		 }
-				 );
+		 //increase the stat in the relative index of the given username
+		 //if stat value not within 1-3 or non-existent username then throw exception
 		 if (!hash.containsKey(username))   
 			 throw new Exception();
 		 if (stat>3 || stat<1)
 			 throw new Exception();
 		 int i = stat - 1;
-//		 hash.forEach((k,v)->{
-//			 System.out.print(k);
-//			 for(int j=0;j<v.length;j++)
-//			 System.out.print(v[j]);
-//		 }
-		//		 );
-		 
-		// System.out.println(username);
 		 int[] stats= hash.get(username);
-		 System.out.println(stats.length);
-		 
 		 stats[i] += 1;
-		
-	
-	 
-//	 	for (int k = 0; k < stats.length; k++) {
-//	 		System.out.println(stats[k]);
-//	 	}
-//	 
 		 hash.put(username,stats);	
-		 
-		 hash.forEach((k,v)->{
-			 System.out.print(k);
-			 for(int j=0;j<v.length;j++)
-				 System.out.print(v[j]);
-		 }
-		);
-		
 		 updatedata();
-	 }
-	 
+	 } 
 }
